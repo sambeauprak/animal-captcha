@@ -7,7 +7,6 @@ if(!defined('ZOOCAPTCHA1')) {
 // Please acknowledge use of this code by including this header.
 require 'Cryptor.php';
 require 'WordsList.php';
-define( 'ABSPATH', dirname(dirname(__FILE__)) . '/' );
 
 class CaptchaNoCookie
 {
@@ -22,6 +21,7 @@ class CaptchaNoCookie
 
   public function __construct()
   {
+    error_log($this->font);
     self::$encryption_key = bin2hex(random_bytes(32));
 
     // generate CAPTCHA code

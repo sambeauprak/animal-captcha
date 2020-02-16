@@ -18,7 +18,7 @@ class Cors
     {
 
         // Allow from any origin
-        if (isset($_SERVER['HTTP_ORIGIN'])) {
+        if (isset($_SERVER['HTTP_ORIGIN']) && $_SERVER['HTTP_ORIGIN'] === 'http://127.0.0.1:5500') {
             // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
             // you want to allow, and if so:
             header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");

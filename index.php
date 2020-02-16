@@ -1,5 +1,6 @@
 <?php
 define('ZOOCAPTCHA1', true);
+define('ABSPATH', dirname(__FILE__) . '/');
 $request = $_SERVER['REQUEST_URI'];
 
 switch ($request) {

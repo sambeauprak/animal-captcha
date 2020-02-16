@@ -7,7 +7,6 @@ if (!defined('ZOOCAPTCHA1')) {
 if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) &&
 ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') &&
 $_SERVER['REQUEST_METHOD'] == 'POST') {
-    define('ABSPATH', dirname(dirname(__FILE__)) . '/');
     require ABSPATH . 'src/CaptchaNonceNoCookie.php';
     require ABSPATH . 'src/Cors.php';
 
@@ -20,7 +19,7 @@ $_SERVER['REQUEST_METHOD'] == 'POST') {
             'message' => 'Sorry, the CAPTCHA code you entered was not correct!'
         ));
     } else {
-    
+        
         // mail function
     }
 } else {

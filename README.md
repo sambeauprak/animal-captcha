@@ -78,7 +78,6 @@ if(!defined('ZOOCAPTCHA1')) {
     header('HTTP/1.0 403 Forbidden');
     exit;
  }
-define( 'ABSPATH', dirname(dirname(__FILE__)) . '/' );
 require ABSPATH.'src/CaptchaNonceNoCookie.php';
 
 if(!CaptchaNonceNoCookie::validate($_POST['crypted'], $_POST['captcha'])) {
